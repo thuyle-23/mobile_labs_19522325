@@ -22,9 +22,9 @@ public class MainActivity extends AppCompatActivity {
 
     GridView gridView;
     String[] name = {"He'd have you all unravel at the",
-                    "Heed not the rabble",
-                    "Sound of screams but the",
-                    "Who scream"};
+            "Heed not the rabble",
+            "Sound of screams but the",
+            "Who scream"};
     int[] colorname = {R.color.color8, R.color.color9, R.color.color10, R.color.color11};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         gridView.setAdapter(customAdapter);
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
-                    public void onItemClick(AdapterView<?> parent, View view, int position, long id){
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id){
                 Intent intent = new Intent(getApplicationContext(), GridActivity.class);
                 intent.putExtra("name", name[position]);
                 intent.putExtra("image", colorname[position]);
