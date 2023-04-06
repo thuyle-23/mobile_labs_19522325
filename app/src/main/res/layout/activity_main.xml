@@ -19,46 +19,47 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="9dp"
-            android:text="Full Name"
+            android:layout_marginTop="8dp"
+            android:text="@string/fullName"
             android:textStyle="bold"
+            android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints"></com.google.android.material.textview.MaterialTextView>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayout1"
+            android:id="@+id/txtFullName"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="20dp"
-            android:hint="Please enter full name"
+            android:hint="@string/hintFullName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/textInputEditText1"
+                android:id="@+id/txtInputName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayout2"
+            android:id="@+id/txtGrossSal"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="130dp"
             android:layout_marginEnd="20dp"
-            android:hint="Please enter gross salary"
+            android:hint="@string/hintGrossSal"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/textInputEditText2"
+                android:id="@+id/txtInputSal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number" />
@@ -70,25 +71,27 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
-            android:text="Gross Salary"
+            android:text="@string/gross_salary"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/textInputLayout2"
-            app:layout_constraintStart_toStartOf="@+id/textInputLayout2"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/txtGrossSal"
+            app:layout_constraintStart_toStartOf="@+id/txtGrossSal"
             tools:ignore="MissingConstraints"></com.google.android.material.textview.MaterialTextView>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnCalc"
-            android:layout_width="108dp"
+            android:layout_width="115dp"
             android:layout_height="55dp"
             android:layout_marginStart="148dp"
             android:layout_marginTop="212dp"
-            android:hint="Calculate"
+            android:hint="@string/calc"
             android:textColorHint="#FFFFFF"
+            android:textSize="16sp"
             app:backgroundTint="@color/color3"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:cornerRadius="5dp"
-            tools:ignore="MissingConstraints"></com.google.android.material.button.MaterialButton>
+            tools:ignore="MissingConstraints" />
 
         <View
             android:id="@+id/view"
@@ -99,5 +102,16 @@
             android:layout_marginTop="285dp"
             />
 
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="308dp"
+            android:textSize="16sp"
+            android:text="Nguyễn Văn A"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
