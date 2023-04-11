@@ -1,19 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="409dp"
-    android:layout_height="729dp"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintBottom_toBottomOf="parent"
-    tools:layout_editor_absoluteY="1dp"
-    android:fillViewport="true">
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:context=".MainActivity">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintTop_toBottomOf="parent"
+    app:layout_constraintBottom_toTopOf="parent"
+    tools:context=".MainActivity">
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/txtViewFullName"
@@ -22,8 +15,8 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="8dp"
             android:text="@string/fullName"
-            android:textStyle="bold"
             android:textSize="16sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints"></com.google.android.material.textview.MaterialTextView>
@@ -46,7 +39,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:imeActionLabel="Done"
-                android:singleLine="true"/>
+                android:singleLine="true" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -65,10 +58,9 @@
                 android:id="@+id/txtInputGrossSal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="number"
                 android:imeActionLabel="Done"
-                android:singleLine="true"/>
-
+                android:inputType="number"
+                android:singleLine="true" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textview.MaterialTextView
@@ -77,8 +69,8 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
             android:text="@string/gross_salary"
-            android:textStyle="bold"
             android:textSize="16sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/txtEditGrossSal"
             app:layout_constraintStart_toStartOf="@+id/txtEditGrossSal"
             tools:ignore="MissingConstraints"></com.google.android.material.textview.MaterialTextView>
@@ -93,31 +85,31 @@
             android:textColorHint="#FFFFFF"
             android:textSize="16sp"
             app:backgroundTint="@color/color3"
+            app:cornerRadius="6dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:cornerRadius="6dp"
             tools:ignore="MissingConstraints" />
 
         <View
             android:id="@+id/view"
             style="@style/Divider"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="MissingConstraints"
-            app:layout_constraintTop_toTopOf="parent"
             android:layout_marginTop="285dp"
-            />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
 
         <ListView
             android:id="@+id/listViewPersonalSal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="290dp"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
             android:layout_marginStart="20dp"
+            android:layout_marginTop="290dp"
             android:layout_marginEnd="20dp"
             android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnCalc"></ListView>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnCalc"
+            app:layout_constraintTop_toTopOf="parent"
+            android:divider="@null"
+            android:dividerHeight="-15dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
