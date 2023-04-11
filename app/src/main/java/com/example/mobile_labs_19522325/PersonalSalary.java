@@ -4,11 +4,12 @@ package com.example.mobile_labs_19522325;
 
 public class PersonalSalary {
     String fullName;
-    int grossSalary;
+    double grossSalary;
 
     public static final int dependenceCost = 11000000;
 
-    public PersonalSalary(String fullName, int grossSalary) {
+    public PersonalSalary(){}
+    public PersonalSalary(String fullName, double grossSalary) {
         this.fullName = fullName;
         this.grossSalary = grossSalary;
     }
@@ -21,18 +22,16 @@ public class PersonalSalary {
         this.fullName = fullName;
     }
 
-    public int getGrossSalary() {
+    public double getGrossSalary() {
         return grossSalary;
     }
 
-    public void setGrossSalary(int grossSalary) {
+    public void setGrossSalary(double grossSalary)
+    {
         this.grossSalary = grossSalary;
     }
-    double getSalary(){
-        double tmp = this.grossSalary * (1 - 0.105);
-        if(tmp <= dependenceCost)
-            return tmp;
-        return dependenceCost * (tmp - dependenceCost) * (1-0.05);
+    public String toString(){
+        return this.fullName + " - " + " Net Salary: " + this.grossSalary;
     }
 
 }
