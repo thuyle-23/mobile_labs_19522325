@@ -1,65 +1,90 @@
 package com.example.mobile_labs_19522325;
 
-import static com.example.mobile_labs_19522325.PersonalSalary.dependenceCost;
+import static android.content.ContentValues.TAG;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
-import android.view.inputmethod.EditorInfo;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ListView;
 
-import com.google.android.material.textfield.TextInputEditText;
-import com.google.android.material.textfield.TextInputLayout;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
-import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
 
 public class MainActivity extends AppCompatActivity {
-    TextInputEditText txtInputName, txtInputGrossSal;
-    ArrayList<PersonalSalary> arr;
-    Button btnCalc;
-    ListView listViewPersonalSal;
+    Button btnAdd, btnQueryAll;
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        arr = new ArrayList<PersonalSalary>();
-        txtInputName = (TextInputEditText) findViewById(R.id.txtInputName);
-        txtInputGrossSal = (TextInputEditText) findViewById(R.id.txtInputGrossSal);
-        btnCalc = (Button) findViewById(R.id.btnCalc);
-        listViewPersonalSal = (ListView) findViewById(R.id.listViewPersonalSal);
+        btnAdd = (Button) findViewById(R.id.btnAdd);
+        btnQueryAll = (Button) findViewById(R.id.btnQueryAll);
 
-        ArrayAdapter<PersonalSalary> adapter = new ArrayAdapter<PersonalSalary>(
-                MainActivity.this, android.R.layout.simple_list_item_1, arr
-        );
-        btnCalc.setOnClickListener(new View.OnClickListener() {
+        btnAdd.setOnClickListener(new View.OnClickListener(){
             @Override
-            public void onClick(View view) {
-                PersonalSalary ps = new PersonalSalary();
+            public void onClick(View v){
+                Map<String, Object> users = new HashMap<>();
+                users.put("fullName", "Nguyen Van D");
+                users.put("phoneNumber", "0986372617");
 
-                ps.setFullName(txtInputName.getText().toString());
-                double grossSalary = Long.parseLong(txtInputGrossSal.getText().toString());
-                double a = (double) (grossSalary - grossSalary * 0.105);
-                if ( a <= dependenceCost)
-                    ps.setGrossSalary(a);
-                else
-                    ps.setGrossSalary((double)(a - (a - dependenceCost) * 0.05));
-                arr.add(ps);
-                adapter.notifyDataSetChanged();
-
-                //Clear all text field when submit button
-                txtInputName.setText("");
-                txtInputGrossSal.setText("");
-
-                //Hide keyboard on button click
-                txtInputName.onEditorAction(EditorInfo.IME_ACTION_DONE);
-                txtInputGrossSal.onEditorAction(EditorInfo.IME_ACTION_DONE);
+                db.collection("users")
+                        .add(users)
+                        .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                            @Override
+                            public void onSuccess(DocumentReference documentReference) {
+                                Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
+                            }
+                        })
+                        .addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Log.w(TAG, "Error adding document", e);
+                            }
+                        });
             }
         });
-        listViewPersonalSal.setAdapter(adapter);
+
+//        public void fetchData(){
+//            DocumentReference document = db.collection("student").document("row3");
+//            document.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>(){
+//
+//            });
+//        }
+        btnQueryAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Map<String, Object> users = new HashMap<>();
+
+                db.collection("users")
+                        .get()
+                        .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                            @Override
+                            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                                if (task.isSuccessful()) {
+                                    for (QueryDocumentSnapshot document : task.getResult()) {
+                                        Log.d(TAG, document.getId() + " => " + document.getData());
+                                    }
+                                } else {
+                                    Log.w(TAG, "Error getting documents.", task.getException());
+                                }
+                            }
+                        });
+            }
+        });
     }
 }

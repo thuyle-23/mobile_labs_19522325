@@ -1,8 +1,3 @@
 <resources>
-    <string name="app_name">Mobile Labs 02</string>
-    <string name="hintFullName">Please enter full name</string>
-    <string name="hintGrossSal">Please enter gross salary</string>
-    <string name="fullName">Full Name</string>
-    <string name="gross_salary">Gross Salary</string>
-    <string name="calc">Calculate</string>
+    <string name="app_name">Mobile Labs 03</string>
 </resources>
