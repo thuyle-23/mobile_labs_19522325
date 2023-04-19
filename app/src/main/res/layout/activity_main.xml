@@ -8,108 +8,34 @@
     app:layout_constraintBottom_toTopOf="parent"
     tools:context=".MainActivity">
 
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/txtViewFullName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="8dp"
-            android:text="@string/fullName"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints"></com.google.android.material.textview.MaterialTextView>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAdd"
+        android:layout_width="115dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="56dp"
+        android:hint="Add data"
+        android:textColorHint="#FFFFFF"
+        android:textSize="16sp"
+        app:backgroundTint="@color/color3"
+        app:cornerRadius="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/txtEditFullName"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="20dp"
-            android:hint="@string/hintFullName"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnQueryAll"
+        android:layout_width="170dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="200dp"
+        android:hint="Query all data"
+        android:textColorHint="#FFFFFF"
+        android:textSize="16sp"
+        app:backgroundTint="@color/color3"
+        app:cornerRadius="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/txtInputName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:imeActionLabel="Done"
-                android:singleLine="true" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/txtEditGrossSal"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="130dp"
-            android:layout_marginEnd="20dp"
-            android:hint="@string/hintGrossSal"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/txtInputGrossSal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:imeActionLabel="Done"
-                android:inputType="number"
-                android:singleLine="true" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/txtViewGrossSal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:text="@string/gross_salary"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/txtEditGrossSal"
-            app:layout_constraintStart_toStartOf="@+id/txtEditGrossSal"
-            tools:ignore="MissingConstraints"></com.google.android.material.textview.MaterialTextView>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnCalc"
-            android:layout_width="115dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="148dp"
-            android:layout_marginTop="212dp"
-            android:hint="@string/calc"
-            android:textColorHint="#FFFFFF"
-            android:textSize="16sp"
-            app:backgroundTint="@color/color3"
-            app:cornerRadius="6dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints" />
-
-        <View
-            android:id="@+id/view"
-            style="@style/Divider"
-            android:layout_marginTop="285dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints" />
-
-        <ListView
-            android:id="@+id/listViewPersonalSal"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="290dp"
-            android:layout_marginEnd="20dp"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnCalc"
-            app:layout_constraintTop_toTopOf="parent"
-            android:divider="@null"
-            android:dividerHeight="-15dp" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
