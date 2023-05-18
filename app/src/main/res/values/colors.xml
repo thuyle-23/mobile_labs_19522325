@@ -15,4 +15,6 @@
     <color name="color5">#FF00FF</color>
     <color name="color6">#00FFFF</color>
     <color name="color7">#FFFFFF</color>
+    <color name="fontColor">#1877F2</color>
+    <color name="bgColor">#F0F0F0</color>
 </resources>
