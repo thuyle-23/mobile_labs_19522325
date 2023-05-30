@@ -18,13 +18,13 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".SigninActivity"
+            android:name=".SignupActivity"
             android:exported="false" />
         <activity
             android:name=".QueryAllActivity"
             android:exported="false" />
         <activity
-            android:name=".SignupActivity"
+            android:name=".SigninActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

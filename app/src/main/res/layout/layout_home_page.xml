@@ -50,7 +50,7 @@
                 android:fontFamily="@font/inter_medium"
                 android:gravity="center"
                 android:text="FullName"
-                android:textSize="16sp"></TextView>
+                android:textSize="18sp"></TextView>
 
         </LinearLayout>
 

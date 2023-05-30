@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bgColor"
@@ -38,11 +39,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingTop="10dp"
+            android:paddingTop="80dp"
             android:paddingBottom="10dp"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="40dp"
-            tools:layout_editor_absoluteY="100dp">
+            tools:ignore="MissingConstraints">
 
 
             <LinearLayout
@@ -56,15 +55,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/inter_medium"
-                    android:text="Username"
+                    android:text="@string/txtUsername"
                     android:textSize="16sp"></TextView>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/txtUsernameLayout"
+                    android:id="@+id/inputLayoutUsername"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Please enter Username"
+                    android:hint="@string/hintUsername"
                     app:boxCornerRadiusBottomEnd="10dp"
                     app:boxCornerRadiusBottomStart="10dp"
                     app:boxCornerRadiusTopEnd="10dp"
@@ -91,15 +90,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/inter_medium"
-                    android:text="Password"
+                    android:text="@string/txtPassword"
                     android:textSize="16sp"></TextView>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/txtPasswordLayout"
+                    android:id="@+id/inputLayoutPassword"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Please enter Password"
+                    android:hint="@string/hintPassword"
                     app:boxCornerRadiusBottomEnd="10dp"
                     app:boxCornerRadiusBottomStart="10dp"
                     app:boxCornerRadiusTopEnd="10dp"
@@ -122,10 +121,11 @@
                 android:paddingTop="20dp">
 
                 <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnLogin"
                     android:layout_width="120dp"
                     android:layout_height="55dp"
                     android:fontFamily="@font/inter_semibold"
-                    android:text="Login"
+                    android:text="@string/btnLogin"
                     android:textAllCaps="false"
                     android:textSize="16sp"
                     app:backgroundTint="@color/fontColor">
@@ -143,15 +143,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/inter_medium"
-                    android:text="Don't have an account?"
+                    android:text="@string/txtQuestion"
                     android:textSize="16sp"></TextView>
 
                 <TextView
+                    android:id="@+id/txtSignUp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
                     android:fontFamily="@font/inter_medium"
-                    android:text="Sign Up"
+                    android:text="@string/btnSignUp"
                     android:textColor="@color/color0"
                     android:textSize="16sp">
 
