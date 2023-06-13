@@ -59,6 +59,8 @@
                     android:layout_weight="1"
                     android:text="@string/fade_in"
                     android:gravity="center"
+                    android:backgroundTint="@color/whisper"
+                    android:textColor="@color/color0"
                     android:layout_marginRight="@dimen/margin_base"/>
                 <Button
                     android:id="@+id/btn_fade_in_code"
@@ -67,6 +69,8 @@
                     android:layout_weight="1"
                     android:text="@string/fade_in"
                     android:gravity="center"
+                    android:backgroundTint="@color/whisper"
+                    android:textColor="@color/color0"
                     android:layout_marginRight="@dimen/margin_base"/>
             </LinearLayout>
             <LinearLayout
@@ -81,6 +85,8 @@
                     android:layout_weight="1"
                     android:text="@string/fade_out"
                     android:gravity="center"
+                    android:backgroundTint="@color/whisper"
+                    android:textColor="@color/color0"
                     android:layout_marginRight="@dimen/margin_base"/>
                 <Button
                     android:id="@+id/btn_fade_out_code"
@@ -89,6 +95,8 @@
                     android:layout_weight="1"
                     android:text="@string/fade_out"
                     android:gravity="center"
+                    android:backgroundTint="@color/whisper"
+                    android:textColor="@color/color0"
                     android:layout_marginRight="@dimen/margin_base"/>
             </LinearLayout>
             <LinearLayout
@@ -103,6 +111,8 @@
                     android:layout_weight="1"
                     android:text="@string/blink"
                     android:gravity="center"
+                    android:backgroundTint="@color/whisper"
+                    android:textColor="@color/color0"
                     android:layout_marginRight="@dimen/margin_base"/>
                 <Button
                     android:id="@+id/btn_blink_code"
@@ -111,6 +121,8 @@
                     android:layout_weight="1"
                     android:text="@string/blink"
                     android:gravity="center"
+                    android:backgroundTint="@color/whisper"
+                    android:textColor="@color/color0"
                     android:layout_marginRight="@dimen/margin_base"/>
             </LinearLayout>
             <LinearLayout
@@ -125,6 +137,8 @@
                     android:layout_weight="1"
                     android:text="@string/zoom_in"
                     android:gravity="center"
+                    android:backgroundTint="@color/whisper"
+                    android:textColor="@color/color0"
                     android:layout_marginRight="@dimen/margin_base"/>
                 <Button
                     android:id="@+id/btn_zoom_in_code"
@@ -133,6 +147,8 @@
                     android:layout_weight="1"
                     android:text="@string/zoom_in"
                     android:gravity="center"
+                    android:backgroundTint="@color/whisper"
+                    android:textColor="@color/color0"
                     android:layout_marginRight="@dimen/margin_base"/>
             </LinearLayout>
             <LinearLayout
@@ -147,6 +163,8 @@
                     android:layout_weight="1"
                     android:text="@string/zoom_out"
                     android:gravity="center"
+                    android:backgroundTint="@color/whisper"
+                    android:textColor="@color/color0"
                     android:layout_marginRight="@dimen/margin_base"/>
                 <Button
                     android:id="@+id/btn_zoom_out_code"
@@ -155,6 +173,8 @@
                     android:layout_weight="1"
                     android:text="@string/zoom_out"
                     android:gravity="center"
+                    android:backgroundTint="@color/whisper"
+                    android:textColor="@color/color0"
                     android:layout_marginRight="@dimen/margin_base"/>
             </LinearLayout>
             <LinearLayout
@@ -169,6 +189,8 @@
                     android:layout_weight="1"
                     android:text="@string/rotate"
                     android:gravity="center"
+                    android:backgroundTint="@color/whisper"
+                    android:textColor="@color/color0"
                     android:layout_marginRight="@dimen/margin_base"/>
                 <Button
                     android:id="@+id/btn_rotate_code"
@@ -177,6 +199,8 @@
                     android:layout_weight="1"
                     android:text="@string/rotate"
                     android:gravity="center"
+                    android:backgroundTint="@color/whisper"
+                    android:textColor="@color/color0"
                     android:layout_marginRight="@dimen/margin_base"/>
             </LinearLayout>
             <LinearLayout
@@ -191,6 +215,8 @@
                     android:layout_weight="1"
                     android:text="@string/move"
                     android:gravity="center"
+                    android:backgroundTint="@color/whisper"
+                    android:textColor="@color/color0"
                     android:layout_marginRight="@dimen/margin_base"/>
                 <Button
                     android:id="@+id/btn_move_code"
@@ -199,6 +225,8 @@
                     android:layout_weight="1"
                     android:text="@string/move"
                     android:gravity="center"
+                    android:backgroundTint="@color/whisper"
+                    android:textColor="@color/color0"
                     android:layout_marginRight="@dimen/margin_base"/>
             </LinearLayout>
             <LinearLayout
@@ -213,6 +241,8 @@
                     android:layout_weight="1"
                     android:text="@string/slide_up"
                     android:gravity="center"
+                    android:backgroundTint="@color/whisper"
+                    android:textColor="@color/color0"
                     android:layout_marginRight="@dimen/margin_base"/>
                 <Button
                     android:id="@+id/btn_slide_up_code"
@@ -221,6 +251,8 @@
                     android:layout_weight="1"
                     android:text="@string/slide_up"
                     android:gravity="center"
+                    android:backgroundTint="@color/whisper"
+                    android:textColor="@color/color0"
                     android:layout_marginRight="@dimen/margin_base"/>
             </LinearLayout>
             <LinearLayout
@@ -235,6 +267,8 @@
                     android:layout_weight="1"
                     android:text="@string/bounce"
                     android:gravity="center"
+                    android:backgroundTint="@color/whisper"
+                    android:textColor="@color/color0"
                     android:layout_marginRight="@dimen/margin_base"/>
                 <Button
                     android:id="@+id/btn_bounce_code"
@@ -243,6 +277,8 @@
                     android:layout_weight="1"
                     android:text="@string/bounce"
                     android:gravity="center"
+                    android:backgroundTint="@color/whisper"
+                    android:textColor="@color/color0"
                     android:layout_marginRight="@dimen/margin_base"/>
             </LinearLayout>
             <LinearLayout
@@ -257,6 +293,8 @@
                     android:layout_weight="1"
                     android:text="@string/combine"
                     android:gravity="center"
+                    android:backgroundTint="@color/whisper"
+                    android:textColor="@color/color0"
                     android:layout_marginRight="@dimen/margin_base"/>
                 <Button
                     android:id="@+id/btn_combine_code"
@@ -265,6 +303,8 @@
                     android:layout_weight="1"
                     android:text="@string/combine"
                     android:gravity="center"
+                    android:backgroundTint="@color/whisper"
+                    android:textColor="@color/color0"
                     android:layout_marginRight="@dimen/margin_base"/>
             </LinearLayout>
         </LinearLayout>
