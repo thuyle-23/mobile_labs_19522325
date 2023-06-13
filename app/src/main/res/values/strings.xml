@@ -1,22 +1,15 @@
 <resources>
-    <string name="app_name">Mobile Labs 03</string>
-    <string name="txtFullName">Fullname</string>
-    <string name="hintFullName">Please enter Fullname</string>
-    <string name="txtPhone">Phone</string>
-    <string name="hintPhone">Please enter Phone</string>
-    <string name="txtUsername">Username</string>
-    <string name="hintUsername">Please enter Username</string>
-    <string name="txtPassword">Password</string>
-    <string name="hintPassword">Please enter Password</string>
-    <string name="btnSignUp">Sign Up</string>
-    <string name="btnLogin">Login</string>
-    <string name="txtBackTo">Back to</string>
-    <string name="txtLogin">Login</string>
-    <string name="err_msg_fullname">Enter your full name</string>
-    <string name="err_msg_phone">Enter valid phone number</string>
-    <string name="err_msg_username">Enter username at least 6 alphabet characters</string>
-    <string name="err_msg_password">Enter password at least 6 characters</string>
-    <string name="txtQuestion">Don\'t have an account?</string>
-    <string name="txtSuccess">Register Successfully</string>
-    <string name="txtIncorrect">Username or Password is incorrect</string>
+    <string name="app_name">Mobile Labs 05</string>
+    <string name="from_xml">From XML</string>
+    <string name="from_code">From CODE</string>
+    <string name="fade_in">Fade In</string>
+    <string name="fade_out">Fade Out</string>
+    <string name="blink">Blink</string>
+    <string name="zoom_in">Zoom In</string>
+    <string name="zoom_out">Zoom Out</string>
+    <string name="rotate">Rotate</string>
+    <string name="move">Move</string>
+    <string name="slide_up">Slide Up</string>
+    <string name="bounce">Bounce</string>
+    <string name="combine">Combine</string>
 </resources>
